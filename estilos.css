@@ -1,0 +1,90 @@
+
+.conteiner{
+    display: grid;
+    grid-template-areas: 
+                        "header header"
+                        "sidebar main"
+                        "footer footer";
+    grid-template-columns: 180px 1fr;
+    gap: 10px;
+}
+/*barra superior*/
+header{
+    grid-area: header;
+    background-color: rgb(235, 216, 175);
+    gap: 10px;
+    padding: 10px;
+}
+/*barra lateral*/
+aside.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(199, 170, 77);
+    padding: 5px;
+
+}
+/*area principal*/
+main{
+    grid-area:main;
+    background-color: rgb(171, 119, 35);
+    color: white;
+    gap:5px;
+    padding:10px;
+}
+/*pie de pagina*/
+footer{
+    grid-area:footer;
+    background-color: rgb(126, 110, 20);
+    color: white;
+    padding: 5px;
+}
+
+/*dentro de main content*/
+.widget{
+    display: grid;
+    grid-column: auto;
+    background-color: rgba(238, 145, 145, 0.527);
+    gap: 20px;
+    padding: 20px;
+}
+
+.article{
+    background-color: rgb(248, 212, 159);
+    padding: 10px;
+    color: black;
+    border: 4px;
+}
+/*tarjeta*/
+.KPICards{
+    display: flex ;
+    justify-content:flex-start;
+    gap: 15px;
+    padding: 20px;
+    background-color: rgb(230, 148, 110);
+}
+
+.tarjeta{
+    background-color: rgb(228, 189, 143);
+    color: black;
+    padding: 10px;
+    margin: auto;
+}
+
+/*movil*/
+@media (max-width: 768px){
+    .conteiner{
+        grid-template-areas: 
+                            "header"
+                            "main"
+                            "sidebar"
+                            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .KPICards{
+        flex-direction: column;
+    }
+
+    .widget{
+        flex-direction: column;
+    }
+}
